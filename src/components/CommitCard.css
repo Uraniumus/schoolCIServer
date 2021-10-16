@@ -1,0 +1,166 @@
+/*-----------------Отрисовка статуса------------------*/
+.ccard__status>i{
+    width: 24px;
+    height: 24px;
+    padding: 2px 12px;
+}
+
+.success>i{
+    background: var(--icon-done) no-repeat center;
+}
+
+.fail>i{
+    background: var(--icon-fail) no-repeat center;
+}
+
+.warning>i{
+    background: var(--icon-clock) no-repeat center;
+}
+
+/*-----------------Отрисовка /статуса------------------*/
+/*-----------------Отрисовка первой строчки карточки------------------*/
+.ccard__comment{
+    display: flex;
+    gap:4px;
+}
+.ccard__comment-num{
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 20px;
+}
+.ccard__comment-text{
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 20px;
+}
+.success{ color: var(--color-green);}
+.fail{ color: var(--color-red);}
+.warning{ color: var(--color-orange);}
+
+@media screen and (max-width: 400px) {
+    .ccard__comment{
+        flex-direction: column;
+        gap: 8px;
+    }
+}
+/*-----------------/Отрисовка первой строчки карточки------------------*/
+/*-----------------Отрисовка второй строчки карточки------------------*/
+.ccard__info{
+    display: flex;
+    gap: 8px;
+    font-size: 13px;
+}
+.ccard__info-commit, .ccard_info-person{
+    display: inline-flex;
+    gap: 4px;
+}
+.ccard__info>span>i{
+    width: 16px;
+    height: 16px;
+    opacity: var(--opacity-icon);
+}
+.ccard__info-commit>i{ background: var(--icon-branch) no-repeat center; }
+.ccard_info-person>i{ background: var(--icon-user) no-repeat center;}
+
+.ccard__info-commit-hash{ opacity: var(--opacity-text); }
+
+@media screen and (max-width: 400px) {
+    .ccard__info{
+        flex-direction: column;
+        gap: 8px;
+    }
+}
+
+/*-----------------/Отрисовка второй строчки карточки------------------*/
+/*-----------------Отрисовка времени------------------*/
+.ccard__date, .ccard__timespent{
+    opacity: var(--opacity-text);
+    word-wrap: nowrap;
+    font-size: 13px;
+    line-height: 16px;
+    display: flex;
+    gap:4px;
+}
+.ccard__date>i, .ccard__timespent>i{
+    width: 16px;
+    height: 16px;
+    opacity: var(--opacity-icon);
+}
+.ccard__date>i{ background: var(--icon-calendar) no-repeat center; }
+.ccard__timespent>i{ background: var(--icon-stopwatch) no-repeat center; }
+
+
+/*-----------------/Отрисовка времени------------------*/
+/*-----------------Отрисовка сетки------------------*/
+.grid{
+    display: grid;
+    padding: 12px 24px;
+    border: solid 1px #e6e6e6;
+    border-radius: 6px;
+    column-gap: 8px;
+    row-gap: 8px;
+    grid-template-columns: 24px auto 98px;
+    box-shadow: 0px 0px 1px rgba(67, 68, 69, 0.3), 0px 1px 1px rgba(67, 68, 69, 0.3);
+}
+.grid:hover{
+    box-shadow: 0px 0px 1px rgba(67, 68, 69, 0.3), 0px 2px 8px rgba(67, 68, 69, 0.3);
+}
+
+.ccard__status{
+    grid-column: 1 / span 1;
+    grid-row: 1 / span 2;
+}
+
+.ccard__comment{
+    grid-column: 2 / span 1;
+    grid-row: 1 / span 1;
+}
+
+.ccard__date{
+    grid-column: 3 / span 1;
+    grid-row: 1 / span 1;
+}
+
+.ccard__timespent{
+    grid-column: 3 / span 1;
+    grid-row: 2 / span 1;
+}
+
+.separator{
+    display: none;
+}
+
+@media screen and (max-width: 400px) {
+    .grid{
+        grid-template-columns: 24px auto;
+    }
+    .ccard__status{
+        grid-column: 1 / span 1;
+        grid-row: 1 / span 3;
+    }
+    .ccard__comment{
+        grid-column: 2 / span 2;
+        grid-row: 1 / span 1;
+    }
+    .ccard__info{
+        grid-column: 2 / span 2;
+        grid-row: 2 / span 1;
+    }
+    .separator{
+        grid-column: 2 / span 2;
+        grid-row: 3 / span 1;
+        display: block;
+        padding-top: 1px;
+        background-color: var(--color-blue-light-gray);
+    }
+    .ccard__date{
+        grid-column: 2 / span 1;
+        grid-row: 4 / span 1;
+    }
+    .ccard__timespent{
+        grid-column: 3 / span 1;
+        grid-row: 4 / span 1;
+    }
+}
+
+/*-----------------/Отрисовка сетки------------------*/

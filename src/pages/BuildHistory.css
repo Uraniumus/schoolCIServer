@@ -1,0 +1,122 @@
+.BuildHistory {
+    background-color: var(--color-white);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.BuildHistory>.content{
+    flex: 1 0 auto;
+    /* display: flex; */
+}
+
+.BuildHistory>.content>.wrap{
+    margin-left: auto;
+    margin-right: auto;
+    max-width: var(--window-width);
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding: 8px 0;
+}
+.flex{
+    display: flex;
+}
+
+@media screen and (max-width: 400px) {
+    .ya-button.settings span, .ya-button.build span{
+        display: none;
+    }
+    .ya-button.settings, .ya-button.build{
+        padding: 0 8px;
+    }
+    .flex{
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width: 816px) {
+    .BuildHistory>.content>.wrap{
+        padding: 8px 16px;
+    }
+}
+
+/*жосская копипаста с модалкой*/
+
+.modal {
+    position: fixed;
+    /* фиксированное положение */
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.4);/* цвет фона */
+    z-index: 1050;
+    opacity: 0; /*по умолчанию модальное окно прозрачно */
+    transition: opacity 200ms ease-in; /* анимация перехода */
+    pointer-events: none;    /* элемент невидим для событий мыши */
+
+  }
+
+  /* при отображении модального окно */
+  .modal:target {
+    opacity: 1;
+    pointer-events: auto;
+    overflow-y: auto;
+  }
+
+  /* ширина модального окна и его отступы от экрана */
+  .modal-dialog {
+    position: relative;
+    width: auto;
+    margin: 12px;
+  }
+
+  @media (min-width: 576px) {
+    .modal-dialog {
+      max-width: 485px;
+      margin: calc(100vh/2 - 188px/2) auto;
+    }
+  }
+
+  /* свойства для блока, содержащего контент модального окна */
+  .modal-content {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    background-clip: padding-box;
+    border-radius: 4px;
+    outline: 0;
+    box-shadow: 0px 0px 1px rgba(67, 68, 69, 0.3), 0px 6px 16px rgba(67, 68, 69, 0.3);
+  }
+  
+  /* свойства для блока, содержащего основное содержимое окна */
+  .modal-body {
+    position: relative;
+    padding: 20px 17.5px;
+    gap: 12px;
+    display: flex;
+    flex-direction: column;
+    overflow: auto;
+  }
+
+  .modal-header{
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 22px;
+  }
+
+  .modal-desc{
+    font-size: 13px;
+    line-height: 18px;
+  }
+
+  .modal-btn{
+      display: flex;
+      gap: 10px;
+  }
+
+  .modal.open{
+    opacity: 1;
+}

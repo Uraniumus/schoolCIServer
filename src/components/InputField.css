@@ -1,0 +1,34 @@
+.field__label{
+    font-size: 13px;
+    line-height: 18px;  
+    padding: 2px 0;
+}
+.InputField{
+    padding: 8px 0;
+}
+.required{
+    color: var(--color-red);
+}
+
+.field__label>input{
+    display: block;
+    padding: 11px 13px 10px;
+    border: 2px solid var(--color-bg-control);
+    border-radius: 4px;
+    margin-top: 4px;
+    font-size: 13px;
+    width: 90%;
+}
+
+.wrong-value{
+    border: 2px solid var(--color-red) !important;
+}
+/* x-field{
+    display:inline;
+    position:relative;
+    }
+x-field .close {
+position:absolute;
+padding:0 5px;
+right:0;
+} */

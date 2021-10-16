@@ -1,0 +1,35 @@
+.Start {
+    background-color: var(--color-white);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+  
+.Start>.content{
+    flex: 1 0 auto;
+    display: flex;
+}
+
+.Start>.content>.wrap{
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 8px 0;
+}
+
+.text{
+    width: 264px;
+    text-align: center;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 16.25px;
+    padding-bottom: 24px;
+}
+
+.tools{
+    background: var(--icon-tools) no-repeat center;
+    width: 124px; 
+    height: 124px; 
+    padding: 32px;
+}

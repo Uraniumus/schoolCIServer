@@ -1,0 +1,10 @@
+.ya-link {
+    font-family: 'YS Text';
+    font-size: 13px;
+    color: var(--color-blue-gray);
+}
+
+.ya-link:hover {
+    color: var(--color-link-hover);
+    cursor: pointer;
+}

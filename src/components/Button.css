@@ -1,0 +1,71 @@
+.ya-button{
+    background-color: var(--color-bg-control);
+    font-size: 13px;
+    font-family: 'YS text';
+    font-weight: 400;
+    color: var(--color-text);
+    border: none;
+    border-radius: 5px;
+    padding: 0 20px;
+    white-space: nowrap;
+    text-align: center;
+    cursor: default; 
+}
+
+.ya-button.settings, .ya-button.build{
+    padding-right: 13px; 
+    padding-left: 8px;
+}
+
+.ya-button.settings i{
+    background: var(--icon-cog) no-repeat center;
+    width: 12px; 
+    height: 12px; 
+    padding: 0 8px;
+}
+
+.ya-button.build i{
+    background: var(--icon-play) no-repeat center;
+    width: 12px; 
+    height: 12px; 
+    padding: 0 8px;
+}
+
+@media screen and (max-width: 400px) {
+    .ya-button.settings span, .ya-button.build span{
+        display: none;
+    }
+    .ya-button.settings, .ya-button.build{
+        padding: 0 8px;
+    }
+}
+
+.ya-button.active i{
+    display: none;
+}
+.ya-button.active {
+    box-sizing: border-box;
+    background-color: var(--color-active-btn);
+}
+
+.ya-button.small{
+    padding: 0 8px;
+}
+
+.ya-button.cancel{
+    background-color: var(--color-white);
+    border: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.big-size{
+    line-height: 36px;
+}
+
+.medium-size{
+    line-height: 28px;
+}
+
+.inactive{
+    background-color: #cccccc !important;
+}
+
