@@ -1,2 +1,15 @@
-# schoolCIServer
-CI server for Ya.School
+# Привет!
+
+Вот мои небольшие зарисовки на тему "как я провела с реактом неделю"
+
+### Чтобы запустить и было красиво, используй
+`npm i`
+`npm run build`
+`npm install -g serve`
+`serve -s build`
+
+### Ну а если ты - человек простой, то набирай 
+ `npm i`
+ `npm start`
+ 
+Ну и по любым вопросам пиши @podlol
